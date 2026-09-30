@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Kingdoms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sky"></div>
+
+    <main class="game">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">THE ROYAL REALMS</p>
+                <h1>♛ LUDO KINGDOMS</h1>
+            </div>
+            <button id="newGameBtn" class="small-btn">NEW GAME</button>
+        </header>
+
+        <section class="game-layout">
+            <div class="board-wrap">
+                <div class="board" id="board">
+                    <div class="kingdom red-home">
+                        <span>🔥</span><b>FIRE REALM</b>
+                        <div class="yard" id="red-yard"></div>
+                    </div>
+
+                    <div class="kingdom green-home">
+                        <span>🌲</span><b>FOREST REALM</b>
+                        <div class="yard" id="green-yard"></div>
+                    </div>
+
+                    <div class="kingdom blue-home">
+                        <span>🌊</span><b>OCEAN REALM</b>
+                        <div class="yard" id="blue-yard"></div>
+                    </div>
+
+                    <div class="kingdom yellow-home">
+                        <span>☀️</span><b>SUN REALM</b>
+                        <div class="yard" id="yellow-yard"></div>
+                    </div>
+
+                    <div class="center-castle">
+                        <div class="castle-roof">♛</div>
+                        <strong>ROYAL<br>CASTLE</strong>
+                    </div>
+
+                    <div id="path"></div>
+                </div>
+            </div>
+
+            <aside class="panel">
+                <div class="turn-card">
+                    <span class="mini-crown">♛</span>
+                    <div>
+                        <small>CURRENT TURN</small>
+                        <h2 id="turnText">Red Realm</h2>
+                    </div>
+                </div>
+
+                <div class="dice-box">
+                    <p>ROYAL DICE</p>
+                    <button id="dice" class="dice" aria-label="Roll dice">1</button>
+                    <div id="diceHint">Roll to begin</div>
+                </div>
+
+                <button id="rollBtn" class="roll-btn">ROLL DICE</button>
+
+                <div class="rules">
+                    <h3>HOW TO PLAY</h3>
+                    <p>Roll a 6 to bring a token out of your kingdom.</p>
+                    <p>Click a glowing token to move it.</p>
+                    <p>Capture an opponent by landing on its tile.</p>
+                </div>
+
+                <div class="status" id="status">Red Realm begins the journey.</div>
+            </aside>
+        </section>
+    </main>
+
+    <div class="modal hidden" id="winModal">
+        <div class="modal-card">
+            <div class="trophy">♛</div>
+            <p>THE KINGDOM HAS FALLEN</p>
+            <h2 id="winnerText">RED REALM WINS!</h2>
+            <button id="playAgainBtn" class="roll-btn">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
